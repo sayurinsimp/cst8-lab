@@ -1,0 +1,33 @@
+.container{
+    width: 180px;
+    border: 15px solid hsl(0, 95%, 24%);
+    background-color: hsl(0, 95%, 24%);
+    padding: 0px;
+    margin: auto;
+    margin-top: 225px;
+    border-radius: 8px;
+    color: white;
+    box-shadow: 2px 2px;
+    text-align: left;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button[type = "submit"]{
+    margin-left: 117.5px;
+    margin-top: 10px;
+    border-radius: 3px;
+}
+
+input[type = text]{
+    margin-bottom: 10px;
+    box-shadow: 1px 1px;
+}
+input[type = password]{
+
+    box-shadow: 1px 1px;
+}
