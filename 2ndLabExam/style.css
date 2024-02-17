@@ -5,10 +5,7 @@
 }
 
 body{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+
     background-image: url(/2ndLabExam/bg_image.jpg);
     background-size: cover;
 }
@@ -41,5 +38,41 @@ p{
     text-align: center;
 }
 
+.userfill{
+    align-items: center;
+    display: flex;
+}
 
+.input{
+    position: relative;
+}
+input[type = submit]{
+    height: 1.3rem;
+    border: 1px solid #878889;
+    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 0px transparent;
+    padding: 1px 45px;
+    background-color: #acb7c3;
+}
 
+input[type = text]{
+    width: 100%;
+    height: 1.46rem;
+    border: 0.5px solid #878889;
+    border-right: 0px transparent;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+input[type = submit]{
+    height: 1.52rem;
+    border: 0.5px solid #878889;
+    
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-left: 0px transparent;
+    padding: 1px 45px;
+    background-color: #acb7c3;
+}
