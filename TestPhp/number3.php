@@ -1,19 +1,31 @@
 <?php
 
-$n3_cookie_name = "user_details";
-$n3_cookie_value = "Kenji";
-$n3_user_id = "12345";
-$n3_token = "abc123token";
-$n3_preferences = array("theme" => "light", "language" => "en_US");
+$cookie_name = "user_details";
+$raw_user_details = array(
+    'name' => 'Francisco',
+    'user_id' => '12345',
+    'token' => 'abc123token',
+    'preferences' => array(
+        'theme' => 'light',
+        'language' => 'en_US'
+    )
+);
 
-$n3_encoded = json_encode($n3_preferences);
+$encoded = json_encode($raw_user_details);
 
-setcookie($n3_cookie_name, $n3_cookie_value, $n3_user_id, $n3_token, $n3_encoded, time() + (60*60*24*30));
+setcookie($cookie_name, $encoded, time() + (60*60*24*30), "/");
 
-if (isset($_COOKIE[$n3_cookie_name])) {
-    echo "Cookie $n3_cookie_name is set! Value is $n3_cookie_value";
+/* CHECKER
+if (isset($_COOKIE[$cookie_name])) {
+    echo "Cookie name is $cookie_name!";
 }
 else{
-    echo "Cookie is not set!";
+    echo "Cookie not set!";
 }
-?>
+*/
+
+session_start();
+
+$session_id = session_id();
+
+echo "The session ID is $session_id.";
